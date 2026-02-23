@@ -1,87 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vigil — Terms of Service</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vigil — Terms of Service</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      line-height: 1.7;
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+<style>
+:root {
+  --bg: #0f172a;
+  --text: #e2e8f0;
+  --card: #1e293b;
+  --border: #334155;
+  --accent: #3b82f6;
+}
 
-    h1, h2, h3 {
-      color: #ffffff;
-      margin-top: 40px;
-    }
+.light {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card: #e2e8f0;
+  --border: #cbd5e1;
+  --accent: #2563eb;
+}
 
-    h1 {
-      margin-bottom: 20px;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: var(--card);
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: 1px solid var(--border);
+}
 
-    table, th, td {
-      border: 1px solid #334155;
-    }
+.sidebar h3 {
+  margin-top: 0;
+}
 
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
+.sidebar a {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  margin: 8px 0;
+}
 
-    th {
-      background-color: #1e293b;
-    }
+.sidebar a:hover {
+  color: var(--accent);
+}
 
-    blockquote {
-      background: #1e293b;
-      padding: 15px;
-      border-left: 4px solid #3b82f6;
-      margin: 20px 0;
-    }
+.toggle-btn {
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
 
-    ul {
-      margin-left: 20px;
-    }
+/* Content */
+.content {
+  margin-left: 260px;
+  padding: 60px 40px;
+  max-width: 1000px;
+}
 
-    a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
+h1, h2 {
+  margin-top: 40px;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
 
-    .back {
-      margin-top: 60px;
-      display: inline-block;
-    }
-  </style>
+table, th, td {
+  border: 1px solid var(--border);
+}
+
+th, td {
+  padding: 10px;
+}
+
+blockquote {
+  background: var(--card);
+  padding: 15px;
+  border-left: 4px solid var(--accent);
+}
+</style>
 </head>
+
 <body>
+
+<div class="sidebar">
+  <button class="toggle-btn" onclick="toggleMode()">Toggle Light/Dark Mode</button>
+
+  <h3>Pages</h3>
+  <a href="index.html">🏠 Home</a>
+  <a href="privacy.html">├─ 🛡 Privacy Policy</a>
+  <a href="terms.html">├─ 🧾 Terms of Service</a>
+  <a href="setup.html">└─ ⚙ Setup</a>
+</div>
+
+<div class="content">
 
 <h1>Vigil — Terms of Service</h1>
 
 <blockquote>
-<strong>Plain Language Summary:</strong> By adding Vigil to your server, you agree to use it responsibly and within Discord's own rules. Vigil takes automated security actions — these can occasionally produce false positives, and it is the server admin's job to review and correct them. The bot operator is not liable for data loss or moderation mistakes. Both this document and the <a href="privacy.html">Privacy Policy</a> apply when you use Vigil.
+<strong>Plain Language Summary:</strong>
+By adding Vigil to your server, you agree to responsible usage within Discord rules.
+Automated security actions may produce false positives.
+The bot operator is not liable for data loss or moderation mistakes.
 </blockquote>
 
 <h2>Version History</h2>
-
 <table>
 <tr>
 <th>Version</th>
@@ -96,90 +138,35 @@
 <tr>
 <td>1.1</td>
 <td>February 2026</td>
-<td>Added governing law, dispute resolution, Privacy Policy cross-reference, international compliance, hosting responsibility, false positive examples, and version history</td>
+<td>Expanded legal protections and compliance coverage</td>
 </tr>
 </table>
 
 <h2>1. Acceptance of Terms</h2>
-<p>By adding Vigil ("the Bot", "we", "us") to your Discord server or using any of its features, you ("the User", "Server Administrator", "Member") agree to be bound by these Terms of Service ("Terms") and the <a href="privacy.html">Vigil Privacy Policy</a>. Both documents apply. If you do not agree to either, do not add or use Vigil.</p>
-
-<p>These Terms apply to all users of Vigil, including server administrators, owners, Trusted Admins, and regular members.</p>
+<p>By adding Vigil to your Discord server, you agree to these Terms and the Privacy Policy.</p>
 
 <h2>2. Eligibility</h2>
-<p>You must be at least 13 years of age and comply with <a href="https://discord.com/terms" target="_blank">Discord's Terms of Service</a> to use Vigil. By using the Bot, you confirm that you meet these requirements. If you are between 13 and 18 years of age, you confirm that you have the consent of a parent or legal guardian.</p>
+<p>You must be at least 13 years old and comply with Discord's Terms of Service.</p>
 
 <h2>3. Description of Service</h2>
 <ul>
-<li>Automated anti-nuke and anti-raid protection</li>
-<li>Server backup and restore functionality (roles, channels, emojis, stickers, server name)</li>
-<li>Quarantine and moderation tools (ban, kick, timeout)</li>
-<li>Three-tier permission management system</li>
-<li>Member verification gate with 4-digit code confirmation</li>
-<li>Security scoring and threat monitoring</li>
+<li>Anti-nuke and anti-raid protection</li>
+<li>Server backup & restore</li>
+<li>Moderation tools</li>
+<li>Permission hierarchy</li>
+<li>Verification system</li>
 </ul>
 
-<p>Vigil is provided <strong>as-is</strong> and may change at any time without prior notice.</p>
+<h2>Limitation of Liability</h2>
+<p>Vigil is provided "as-is". The bot operator is not liable for data loss, false positives, or downtime.</p>
 
-<h2>4. Permitted Use</h2>
-<p>You may use Vigil to protect your server, manage moderation, configure verification systems, and manage server backups responsibly.</p>
+</div>
 
-<h2>5. Prohibited Use</h2>
-<ul>
-<li>Violating Discord's Terms or Community Guidelines</li>
-<li>Harassment or abuse</li>
-<li>Exploiting automated systems</li>
-<li>Reverse-engineering or tampering with the Bot</li>
-<li>Illegal activity</li>
-<li>Misuse of moderation tools</li>
-<li>Reselling or distributing Vigil without permission</li>
-</ul>
-
-<h2>6. Automated Actions & False Positives</h2>
-<p>Vigil performs automated moderation actions based on security signals. False positives may occur.</p>
-
-<ul>
-<li>Rapid channel changes triggering anti-nuke protection</li>
-<li>Mass joins triggering raid detection</li>
-<li>High message activity triggering spam detection</li>
-</ul>
-
-<p>Server administrators are responsible for monitoring logs and correcting automated actions when needed.</p>
-
-<h2>7. Backup and Restore</h2>
-<p>Backups delete current roles and channels before restoration. Message history and DMs are not backed up. Discord CDN links may expire over time.</p>
-
-<h2>8. Permission Hierarchy & Admin Responsibility</h2>
-<p>You are responsible for users you grant elevated permissions to within Vigil.</p>
-
-<h2>9. Hosting Responsibility & Data Security</h2>
-<p>The bot operator is responsible for securing the hosting environment and stored JSON data files.</p>
-
-<h2>10. International Compliance</h2>
-<p>Users must comply with applicable laws including GDPR, CCPA, and other regional regulations.</p>
-
-<h2>11. Disclaimer of Warranties</h2>
-<p>Vigil is provided "as is" without warranties of reliability, uninterrupted service, or perfect restoration.</p>
-
-<h2>12. Limitation of Liability</h2>
-<p>The bot operator is not liable for indirect or consequential damages including data loss, false positives, downtime, or unauthorized access.</p>
-
-<h2>13. Dispute Resolution</h2>
-<p>Disputes should first be resolved informally through direct communication before legal action.</p>
-
-<h2>14. Governing Law & Jurisdiction</h2>
-<p>These Terms are governed by the laws of <strong>India</strong>. Any disputes shall be subject to Indian courts.</p>
-
-<h2>15. Modifications to the Service</h2>
-<p>We may modify or discontinue Vigil at any time. Continued use constitutes acceptance of updated Terms.</p>
-
-<h2>16. Termination</h2>
-<p>You may remove Vigil at any time. We may block access for violations of these Terms.</p>
-
-<h2>17. Contact</h2>
-<p>For concerns or disputes, contact the bot operator through the platform where Vigil is deployed.</p>
-
-<br><br>
-<a href="index.html" class="back">← Back to Home</a>
+<script>
+function toggleMode() {
+  document.body.classList.toggle("light");
+}
+</script>
 
 </body>
 </html>
