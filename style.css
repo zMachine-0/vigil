@@ -1,10 +1,8 @@
-/* ── Fonts ──────────────────────────────────────────────── */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 
-/* ── Reset ──────────────────────────────────────────────── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ── Variables (dark default) ───────────────────────────── */
+/* ── Dark theme (default) ───────────────────────────────── */
 :root {
   --bg:       #0b0d14;
   --surface:  #12151f;
@@ -14,11 +12,10 @@
   --muted:    #868aa8;
   --accent:   #7c6ffa;
   --accent2:  #5be0c8;
-  --nav-h:    68px;
 }
 
-/* ── Light mode — toggled on <html> element ─────────────── */
-html.light-mode {
+/* ── Light theme — applied when body has .light-mode ───── */
+body.light-mode {
   --bg:       #f0f2f9;
   --surface:  #ffffff;
   --surface2: #e4e7f5;
@@ -51,7 +48,7 @@ body.avatar-bg {
   background-position: center top;
   background-attachment: fixed;
 }
-html.light-mode body.avatar-bg {
+body.light-mode.avatar-bg {
   background-image:
     linear-gradient(to bottom, rgba(240,242,249,0.83) 0%, rgba(240,242,249,0.98) 60%),
     url('avatar.png');
@@ -62,7 +59,7 @@ html.light-mode body.avatar-bg {
   position: sticky;
   top: 0;
   z-index: 100;
-  height: var(--nav-h);
+  height: 68px;
   background: rgba(11,13,20,0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -70,7 +67,7 @@ html.light-mode body.avatar-bg {
   transition: background 0.25s;
   flex-shrink: 0;
 }
-html.light-mode .navbar {
+body.light-mode .navbar {
   background: rgba(240,242,249,0.85);
 }
 
@@ -132,7 +129,7 @@ nav a.active { color: var(--accent); }
 }
 #themeToggle:hover { background: var(--accent); color: #fff; border-color: transparent; }
 
-/* ── Shared page wrapper ────────────────────────────────── */
+/* ── Page wrapper ───────────────────────────────────────── */
 .wrapper {
   max-width: 900px;
   margin: 60px auto;
@@ -233,7 +230,7 @@ code {
 .perm-tadmin   { background: rgba(242,90,90,0.12);   color: #f28080; border: 1px solid rgba(242,90,90,0.25); }
 .perm-everyone { background: rgba(134,138,168,0.12); color: #868aa8; border: 1px solid rgba(134,138,168,0.2); }
 
-/* ── Home page hero (inside .content) ──────────────────── */
+/* ── Home hero ──────────────────────────────────────────── */
 .home-hero {
   text-align: center;
   padding: 30px 0 20px;
@@ -294,7 +291,7 @@ code {
   box-shadow: 0 4px 24px rgba(88,101,242,0.35);
 }
 
-/* ── Feature cards (inside .content) ───────────────────── */
+/* ── Feature cards ──────────────────────────────────────── */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
