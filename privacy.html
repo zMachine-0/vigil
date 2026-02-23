@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vigil — Privacy Policy</title>
   <link rel="stylesheet" href="style.css">
+  <script>if(localStorage.getItem('vigil-theme')==='light')document.documentElement.classList.add('light-mode');</script>
 </head>
 <body>
 
@@ -25,7 +26,7 @@
     <div class="content">
 
       <h1>🛡 Privacy Policy</h1>
-      <p class="last-updated">Last Updated: February 2026 · Use of Vigil also implies agreement to the <a href="terms.html" style="color:var(--accent)">Terms of Service</a>.</p>
+      <p class="last-updated">Last Updated: February 2026 · Use of Vigil also implies agreement to the <a href="terms.html">Terms of Service</a>.</p>
 
       <h2>1. Overview</h2>
       <p>This Privacy Policy explains how Vigil ("the Bot", "we", "us") collects, stores, uses, and protects data when used within Discord servers.</p>
@@ -37,14 +38,14 @@
         <li>Channel IDs and Role IDs</li>
         <li>User IDs (for whitelist, quarantine, and permission records)</li>
         <li>Quarantine reasons and timestamps</li>
-        <li>Security event references (e.g., rapid deletions, mass joins — counted, not stored)</li>
+        <li>Security event references (counted, not stored as content)</li>
         <li>Configuration settings (whitelists, thresholds, permissions)</li>
         <li>Server backup data (roles, channels, emojis, stickers, server name)</li>
       </ul>
       <p>Vigil does <strong>not</strong> collect message content, direct messages, email addresses, passwords, IP addresses, or payment information.</p>
 
       <h2>3. Verification Codes</h2>
-      <p>When a member clicks Verify, a temporary 4-digit code is generated and held <strong>in memory only</strong> — never written to disk — for a maximum of 5 minutes. It is deleted immediately after use or expiry.</p>
+      <p>When a member clicks Verify, a temporary 4-digit code is held <strong>in memory only</strong> — never written to disk — for a maximum of 5 minutes. It is deleted immediately after use or expiry.</p>
 
       <h2>4. How Data Is Used</h2>
       <ul>
@@ -57,11 +58,11 @@
       <p>Data is never used for advertising, profiling, analytics, or any purpose beyond core bot operation.</p>
 
       <h2>5. Automated Decision-Making</h2>
-      <p>Vigil uses automated systems to detect suspicious behaviour and may automatically quarantine, ban, or restrict users based on security signals. <strong>False positives can occur.</strong> Server administrators are responsible for reviewing and correcting automated actions.</p>
+      <p>Vigil uses automated systems to detect suspicious behaviour and may automatically quarantine, ban, or restrict users. <strong>False positives can occur.</strong> Server administrators are responsible for reviewing and correcting automated actions.</p>
 
       <h2>6. Data Storage</h2>
-      <p>All data is stored locally on the server hosting Vigil as plain-text JSON files. Data is <strong>not encrypted by default</strong>. It is the responsibility of the bot operator to secure the hosting environment, restrict access, and apply encryption at rest if required.</p>
-      <p>Vigil uses atomic file writes (write to a temporary file, then rename) to prevent corruption. Backup file names are sanitized to prevent path traversal. Corrupted files are automatically backed up and reset.</p>
+      <p>All data is stored locally on the server hosting Vigil as plain-text JSON files. Data is <strong>not encrypted by default</strong>. The bot operator is responsible for securing the hosting environment and applying encryption at rest if required.</p>
+      <p>Vigil uses atomic file writes to prevent corruption, sanitizes backup names to prevent path traversal, and auto-recovers corrupted files.</p>
 
       <h2>7. Data Retention</h2>
       <ul>
@@ -73,36 +74,27 @@
       <p>Removing Vigil from your server does <strong>not</strong> automatically delete stored data files. The bot operator is responsible for purging data for inactive servers.</p>
 
       <h2>8. Data Sharing</h2>
-      <p>Vigil does not sell, trade, or share collected data with any third party. The only external service Vigil interacts with is the Discord API. Data may be disclosed if legally compelled by a valid court order, subpoena, or law enforcement request — and only to the minimum extent required.</p>
+      <p>Vigil does not sell, trade, or share data with any third party. Data may be disclosed if legally compelled by a valid court order or law enforcement request — only to the minimum extent required.</p>
 
       <h2>9. International Data Protection</h2>
       <p>Users and bot operators are responsible for complying with applicable data protection laws, including:</p>
       <ul>
-        <li><strong>GDPR</strong> (European Union &amp; UK) — rights include access, erasure, rectification, restriction, and portability</li>
-        <li><strong>CCPA</strong> (California, USA) — right to know, delete, and opt out of data sale (Vigil does not sell data)</li>
+        <li><strong>GDPR</strong> (EU &amp; UK) — rights include access, erasure, rectification, restriction, and portability. Requests handled within 30 days.</li>
+        <li><strong>CCPA</strong> (California, USA) — right to know, delete, and opt out of data sale. Vigil does not sell data.</li>
         <li>Other applicable local data protection regulations</li>
       </ul>
-      <p>GDPR requests will be handled within 30 days. Contact the bot operator as described in Section 11.</p>
 
       <h2>10. Security Measures</h2>
-      <p>The bot operator is responsible for:</p>
-      <ul>
-        <li>Securing server access with strong authentication (passwords, SSH keys)</li>
-        <li>Limiting file system access to trusted operators only</li>
-        <li>Keeping hosting software and Node.js runtime up to date</li>
-        <li>Encrypting data files at rest if the environment is shared or untrusted</li>
-        <li>Revoking access promptly when team members leave</li>
-      </ul>
+      <p>The bot operator is responsible for securing server access with strong authentication, limiting file access to trusted operators, keeping hosting software up to date, and encrypting data at rest if the environment is shared or untrusted.</p>
 
       <h2>11. Your Rights</h2>
-      <p>As a server administrator, you can view, edit, or delete stored data directly via bot commands or by accessing the <code>data/</code> and <code>backups/</code> directories on the hosting server.</p>
-      <p>As an individual member, you may request that a server administrator remove your records, or contact the bot operator directly if the administrator is unresponsive.</p>
+      <p>As a server administrator, you can view, edit, or delete stored data using bot commands or by accessing the <code>data/</code> and <code>backups/</code> directories on the hosting server. As an individual member, you may request a server administrator remove your records, or contact the bot operator directly.</p>
 
       <h2>12. Changes to This Policy</h2>
       <p>We may update this Privacy Policy at any time. Continued use of Vigil after updates constitutes acceptance of the revised policy.</p>
 
       <h2>13. Contact</h2>
-      <p>For privacy concerns, data access requests, or deletion requests, contact the bot operator through the platform where Vigil is deployed. Please include your Discord user ID and server name so records can be located promptly.</p>
+      <p>For privacy concerns or data requests, contact the bot operator through the platform where Vigil is deployed. Include your Discord user ID and server name so records can be located promptly.</p>
 
     </div>
   </main>
@@ -111,13 +103,6 @@
     <p>© 2026 Vigil Security. All rights reserved.</p>
   </footer>
 
-  <script>
-    const btn = document.getElementById("themeToggle");
-    btn.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
-      btn.textContent = document.body.classList.contains("light-mode") ? "🌙 Dark" : "☀️ Light";
-    });
-  </script>
-
+  <script src="theme.js"></script>
 </body>
 </html>
