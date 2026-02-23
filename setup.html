@@ -1,0 +1,179 @@
+<h1>Vigil Setup 101</h1>
+<p class="muted">Complete Command & Permission Reference</p>
+
+<hr>
+
+<h2>Permission Levels</h2>
+<ul>
+  <li><strong>True Owner</strong> — The actual Discord server owner only</li>
+  <li><strong>Owner Level</strong> — True owner + /owner add users + owner role holders</li>
+  <li><strong>Trusted Admin</strong> — Owner level + /tadmin add users + TA role holders</li>
+  <li><strong>Everyone</strong> — Any server member</li>
+</ul>
+
+<hr>
+
+<h2>Utility</h2>
+
+<h3>/ping</h3>
+<p>Shows the bot's latency in milliseconds.</p>
+<p><strong>Permission:</strong> Everyone</p>
+
+<h3>/score</h3>
+<p>Displays your server’s security score (0–100) with a letter grade (A–F). 
+Includes threat level, quarantined users, log status, backup state, verification gate, and Trusted Admin setup.</p>
+<p><strong>Permission:</strong> Owner Level</p>
+
+<hr>
+
+<h2>Logging</h2>
+
+<h3>/log setchannel [channel]</h3>
+<p>Sets the channel for security alerts and activity logs.  
+Defaults to <strong>#vigil-logs</strong> if not configured.</p>
+<p><strong>Permission:</strong> Owner Level</p>
+
+<hr>
+
+<h2>Owner Management</h2>
+
+<h3>/owner add [user]</h3>
+<p>Grants owner-level access (excluding whitelist and owner management).</p>
+<p><strong>Permission:</strong> True Owner</p>
+
+<h3>/owner remove [user]</h3>
+<p>Revokes owner-level access.</p>
+<p><strong>Permission:</strong> True Owner</p>
+
+<h3>/owner list</h3>
+<p>Displays server owner, owner role (if set), and manually added owners.</p>
+<p><strong>Permission:</strong> Everyone</p>
+
+<h3>/owner setrole [role]</h3>
+<p>Assigns a role that grants owner-level access automatically.</p>
+<p><strong>Permission:</strong> True Owner</p>
+
+<h3>/owner removerole</h3>
+<p>Removes owner role assignment.</p>
+<p><strong>Permission:</strong> True Owner</p>
+
+<hr>
+
+<h2>Trusted Admin Management</h2>
+
+<h3>/tadmin add [user]</h3>
+<p>Grants Trusted Admin rank (ban, kick, timeout, quarantine).</p>
+<p><strong>Permission:</strong> Owner Level</p>
+
+<h3>/tadmin remove [user]</h3>
+<p>Revokes Trusted Admin rank.</p>
+<p><strong>Permission:</strong> Owner Level</p>
+
+<h3>/tadmin list</h3>
+<p>Shows TA role and manually assigned Trusted Admins.</p>
+<p><strong>Permission:</strong> Owner Level</p>
+
+<h3>/tadmin setrole [role]</h3>
+<p>Assigns role-based Trusted Admin access.</p>
+<p><strong>Permission:</strong> Owner Level</p>
+
+<h3>/tadmin removerole</h3>
+<p>Removes Trusted Admin role assignment.</p>
+<p><strong>Permission:</strong> Owner Level</p>
+
+<hr>
+
+<h2>Whitelist Management</h2>
+<p><em>Whitelisted users are fully exempt from automated security actions.</em></p>
+
+<h3>/whitelist add [user]</h3>
+<p>Permanently exempts a user.</p>
+<p><strong>Permission:</strong> True Owner</p>
+
+<h3>/whitelist remove [user]</h3>
+<p>Removes a user from whitelist.</p>
+<p><strong>Permission:</strong> True Owner</p>
+
+<h3>/whitelist list</h3>
+<p>Displays whitelist role and manually whitelisted users.</p>
+<p><strong>Permission:</strong> True Owner</p>
+
+<h3>/whitelist setrole [role]</h3>
+<p>Assigns role-based whitelist access.</p>
+<p><strong>Permission:</strong> True Owner</p>
+
+<h3>/whitelist removerole</h3>
+<p>Removes whitelist role assignment.</p>
+<p><strong>Permission:</strong> True Owner</p>
+
+<hr>
+
+<h2>Quarantine Management</h2>
+<p>Quarantine strips roles, assigns a restricted role, and restores roles on release.</p>
+
+<h3>/quarantine add [user]</h3>
+<p>Quarantines a user (cannot target whitelisted users).</p>
+<p><strong>Permission:</strong> Trusted Admin</p>
+
+<h3>/quarantine remove [user]</h3>
+<p>Restores quarantined user roles.</p>
+<p><strong>Permission:</strong> Trusted Admin</p>
+
+<h3>/quarantine list</h3>
+<p>Lists all quarantined users with timestamps and reasons.</p>
+<p><strong>Permission:</strong> Trusted Admin</p>
+
+<hr>
+
+<h2>Moderation</h2>
+<p>All moderation actions require confirmation and are logged.</p>
+
+<h3>/ban [user]</h3>
+<p>Permanently bans a user.</p>
+<p><strong>Permission:</strong> Trusted Admin</p>
+
+<h3>/kick [user]</h3>
+<p>Kicks a user from the server.</p>
+<p><strong>Permission:</strong> Trusted Admin</p>
+
+<h3>/timeout [user] [duration]</h3>
+<p>Timeout from 1–40,320 minutes (up to 28 days).</p>
+<p><strong>Permission:</strong> Trusted Admin</p>
+
+<hr>
+
+<h2>Backup Management</h2>
+<p>Backups store full server structure including roles, channels, emojis, stickers, and server name.</p>
+
+<h3>/backup create [name]</h3>
+<p>Creates a new backup (confirmation required for overwrite).</p>
+<p><strong>Permission:</strong> Owner Level</p>
+
+<h3>/backup list</h3>
+<p>Lists all backups with metadata.</p>
+<p><strong>Permission:</strong> Owner Level</p>
+
+<h3>/backup load [name]</h3>
+<p>Fully restores server structure. <strong>This cannot be undone.</strong></p>
+<p><strong>Permission:</strong> Owner Level</p>
+
+<hr>
+
+<h2>Verification</h2>
+
+<h3>/setupverify [channel] [role]</h3>
+<p>Creates a button-based 4-digit verification system with expiring codes.</p>
+<p><strong>Permission:</strong> Owner Level</p>
+
+<hr>
+
+<h2>Auto Backup</h2>
+<p>Every midnight UTC, Vigil automatically creates an auto-backup:</p>
+
+<pre>AUTO_BACKUP-1st-Jan-2025</pre>
+
+<p>Only the most recent auto-backup is kept per server.</p>
+
+<hr>
+
+<p class="muted">End of Vigil Command Reference</p>
