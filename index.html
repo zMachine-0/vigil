@@ -1,86 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Vigil - Discord Security Bot</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #e2e8f0;
-      text-align: center;
-      background: url("avatar.png") no-repeat center center fixed;
-      background-size: cover;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vigil — Discord Security Bot</title>
 
-    /* Dark overlay */
-    .overlay {
-      background: rgba(15, 23, 42, 0.85);
-      min-height: 100vh;
-      padding: 100px 20px;
-    }
+<style>
+:root {
+  --bg: #0f172a;
+  --text: #e2e8f0;
+  --card: #1e293b;
+  --border: #334155;
+  --accent: #3b82f6;
+}
 
-    h1 {
-      font-size: 52px;
-      margin-bottom: 10px;
-    }
+.light {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card: #e2e8f0;
+  --border: #cbd5e1;
+  --accent: #2563eb;
+}
 
-    .subtitle {
-      font-size: 20px;
-      opacity: 0.9;
-      margin-bottom: 20px;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+}
 
-    p {
-      font-size: 18px;
-      opacity: 0.8;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: var(--card);
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  border-right: 1px solid var(--border);
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 15px 35px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+.sidebar a {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  margin: 8px 0;
+}
 
-    .btn:hover {
-      background: #1d4ed8;
-    }
+.sidebar a:hover {
+  color: var(--accent);
+}
 
-    footer {
-      margin-top: 100px;
-      font-size: 14px;
-      opacity: 0.7;
-    }
+.toggle-btn {
+  margin-bottom: 20px;
+  padding: 8px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
 
-    a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-  </style>
+/* Content */
+.content {
+  margin-left: 260px;
+  padding: 80px 40px;
+  max-width: 900px;
+}
+
+button.invite {
+  padding: 12px 20px;
+  background: var(--accent);
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+</style>
 </head>
+
 <body>
-  <div class="overlay">
-    <h1>Vigil</h1>
-    <div class="subtitle">Discord Security Bot</div>
-    <p>Advanced anti-nuke and server protection for Discord communities.</p>
 
-    <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1470779818848292997&permissions=8&integration_type=0&scope=bot+applications.commands">
-      Invite Vigil
-    </a>
+<div class="sidebar">
+  <button class="toggle-btn" onclick="toggleMode()">Toggle Light/Dark Mode</button>
+  <a href="index.html">🏠 Home</a>
+  <a href="privacy.html">├─ 🛡 Privacy Policy</a>
+  <a href="terms.html">├─ 🧾 Terms of Service</a>
+  <a href="setup.html">└─ ⚙ Setup</a>
+</div>
 
-    <footer>
-      © 2026 Vigil. All rights reserved.<br>
-      <a href="privacy.html">Privacy Policy</a> • 
-      <a href="terms.html">Terms of Service</a>
-    </footer>
-  </div>
+<div class="content">
+  <h1>Vigil</h1>
+  <p>Advanced Discord Security Bot for anti-nuke, anti-raid, and automated moderation protection.</p>
+
+  <br>
+  <a href="https://discord.com/oauth2/authorize?client_id=1470779818848292997&permissions=8&integration_type=0&scope=bot+applications.commands">
+    <button class="invite">Invite Vigil</button>
+  </a>
+</div>
+
+<script>
+function toggleMode() {
+  document.body.classList.toggle("light");
+}
+</script>
+
 </body>
 </html>
