@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vigil — Setup Guide</title>
   <link rel="stylesheet" href="style.css">
+  <script>if(localStorage.getItem('vigil-theme')==='light')document.documentElement.classList.add('light-mode');</script>
 </head>
 <body class="avatar-bg">
 
@@ -27,7 +28,6 @@
       <h1>Vigil Setup Guide</h1>
       <p class="page-subtitle">Complete Command &amp; Permission Reference</p>
 
-      <!-- ── Permission Levels ── -->
       <h2>Permission Levels</h2>
       <ul>
         <li><strong>True Owner</strong> — The actual Discord server owner only</li>
@@ -36,7 +36,6 @@
         <li><strong>Everyone</strong> — Any server member</li>
       </ul>
 
-      <!-- ── Utility ── -->
       <h2>Utility</h2>
 
       <h3>/ping</h3>
@@ -47,18 +46,16 @@
       <p>Displays your server's security score (0–100) with a letter grade (A–F). Includes threat level, quarantined users, log channel status, backup state, verification gate, and Trusted Admin setup.</p>
       <p><span class="perm perm-owner">Owner Level</span></p>
 
-      <!-- ── Logging ── -->
       <h2>Logging</h2>
 
       <h3>/log setchannel [channel]</h3>
       <p>Sets the channel for all security alerts and activity logs. Falls back to <strong>#vigil-logs</strong> if not configured.</p>
       <p><span class="perm perm-owner">Owner Level</span></p>
 
-      <!-- ── Owner Management ── -->
       <h2>Owner Management</h2>
 
       <h3>/owner add [user]</h3>
-      <p>Grants owner-level access to a user (excludes whitelist management and adding/removing other owners). Requires confirmation.</p>
+      <p>Grants owner-level access (excludes whitelist management and adding/removing other owners). Requires confirmation.</p>
       <p><span class="perm perm-true">True Owner</span></p>
 
       <h3>/owner remove [user]</h3>
@@ -77,11 +74,10 @@
       <p>Removes the owner role assignment. Manually added users are not affected.</p>
       <p><span class="perm perm-true">True Owner</span></p>
 
-      <!-- ── Trusted Admin ── -->
       <h2>Trusted Admin Management</h2>
 
       <h3>/tadmin add [user]</h3>
-      <p>Grants Trusted Admin rank — can use ban, kick, timeout, and quarantine commands. Requires confirmation.</p>
+      <p>Grants Trusted Admin rank — can use ban, kick, timeout, and quarantine. Requires confirmation.</p>
       <p><span class="perm perm-owner">Owner Level</span></p>
 
       <h3>/tadmin remove [user]</h3>
@@ -100,7 +96,6 @@
       <p>Removes the Trusted Admin role assignment. Individual overrides are not affected.</p>
       <p><span class="perm perm-owner">Owner Level</span></p>
 
-      <!-- ── Whitelist ── -->
       <h2>Whitelist Management</h2>
       <p><em>Whitelisted users are fully exempt from all automated security actions — Vigil will never quarantine, ban, or restrict them automatically.</em></p>
 
@@ -124,7 +119,6 @@
       <p>Removes the whitelist role assignment. Manually added users are not affected.</p>
       <p><span class="perm perm-true">True Owner</span></p>
 
-      <!-- ── Quarantine ── -->
       <h2>Quarantine Management</h2>
       <p><em>Quarantine strips all of a user's roles, saves them, and assigns a restricted role blocking messages, reactions, and voice. Roles are fully restored on release.</em></p>
 
@@ -140,7 +134,6 @@
       <p>Lists all currently quarantined users with timestamps and reasons.</p>
       <p><span class="perm perm-tadmin">Trusted Admin</span></p>
 
-      <!-- ── Moderation ── -->
       <h2>Moderation</h2>
       <p><em>All moderation commands show a confirmation prompt before acting and log the action to the log channel. Cannot be used on whitelisted users or the server owner.</em></p>
 
@@ -153,15 +146,14 @@
       <p><span class="perm perm-tadmin">Trusted Admin</span></p>
 
       <h3>/timeout [user] [duration] [reason]</h3>
-      <p>Times out a user for 1 to 40,320 minutes (up to 28 days). During a timeout they cannot send messages or interact. Reason is optional.</p>
+      <p>Times out a user for 1 to 40,320 minutes (up to 28 days). Reason is optional.</p>
       <p><span class="perm perm-tadmin">Trusted Admin</span></p>
 
-      <!-- ── Backup ── -->
       <h2>Backup Management</h2>
       <p><em>Backups capture full server structure: roles, channels (with permission overwrites), emojis, animated emojis, stickers, and server name.</em></p>
 
       <h3>/backup create [name]</h3>
-      <p>Creates a new backup. If a backup with that name exists, you'll be asked to confirm before overwriting. Names can only contain letters, numbers, hyphens, and underscores.</p>
+      <p>Creates a new backup. If a backup with that name exists, confirms before overwriting. Names can only contain letters, numbers, hyphens, and underscores.</p>
       <p><span class="perm perm-owner">Owner Level</span></p>
 
       <h3>/backup list</h3>
@@ -169,21 +161,19 @@
       <p><span class="perm perm-owner">Owner Level</span></p>
 
       <h3>/backup load [name]</h3>
-      <p>Restores a backup. Deletes all current channels and roles, then recreates everything from the backup, including re-uploading emojis and stickers. <strong>This cannot be undone.</strong> Requires confirmation.</p>
+      <p>Restores a backup. Deletes all current channels and roles, then recreates everything from the backup including re-uploading emojis and stickers. <strong>This cannot be undone.</strong> Requires confirmation.</p>
       <p><span class="perm perm-owner">Owner Level</span></p>
 
-      <!-- ── Verification ── -->
       <h2>Verification</h2>
 
       <h3>/setupverify [channel] [role]</h3>
-      <p>Sends a verification message to the chosen channel with a Verify button. Members click it to receive a private 4-digit code, then submit it in a popup. On success they receive the chosen role. Codes expire after 5 minutes and persist across bot restarts.</p>
+      <p>Sends a verification message with a Verify button. Members click it, receive a private 4-digit code, and submit it via a popup. On success they receive the chosen role. Codes expire after 5 minutes and the setup persists across bot restarts.</p>
       <p><span class="perm perm-owner">Owner Level</span></p>
 
-      <!-- ── Auto Backup ── -->
       <h2>Auto Backup</h2>
-      <p>Every midnight UTC, Vigil automatically creates a backup for every server it's in, named:</p>
+      <p>Every midnight UTC, Vigil automatically creates a backup for every server, named:</p>
       <pre>AUTO_BACKUP-1st-Jan-2025</pre>
-      <p>Auto-backups appear in <strong>/backup list</strong> marked with 🔄. Each day's auto-backup overwrites the previous one — only the most recent is kept per server.</p>
+      <p>Auto-backups appear in <strong>/backup list</strong> marked with 🔄. Each day's copy overwrites the previous — only the most recent is kept per server.</p>
 
     </div>
   </main>
@@ -192,13 +182,6 @@
     <p>© 2026 Vigil Security. All rights reserved.</p>
   </footer>
 
-  <script>
-    const btn = document.getElementById("themeToggle");
-    btn.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
-      btn.textContent = document.body.classList.contains("light-mode") ? "🌙 Dark" : "☀️ Light";
-    });
-  </script>
-
+  <script src="theme.js"></script>
 </body>
 </html>
