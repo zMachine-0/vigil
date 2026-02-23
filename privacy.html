@@ -5,166 +5,168 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vigil — Privacy Policy</title>
 <link rel="stylesheet" href="style.css">
-<style>
-:root {
-  --bg: #0f172a;
-  --text: #e2e8f0;
-  --card: #1e293b;
-  --border: #334155;
-  --accent: #3b82f6;
-}
-
-.light {
-  --bg: #f8fafc;
-  --text: #0f172a;
-  --card: #e2e8f0;
-  --border: #cbd5e1;
-  --accent: #2563eb;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  display: flex;
-  line-height: 1.7;
-}
-
-/* Sidebar */
-.sidebar {
-  width: 260px;
-  background: var(--card);
-  height: 100vh;
-  padding: 20px;
-  position: fixed;
-  border-right: 1px solid var(--border);
-}
-
-.sidebar a {
-  display: block;
-  color: var(--text);
-  text-decoration: none;
-  margin: 8px 0;
-}
-
-.sidebar a:hover {
-  color: var(--accent);
-}
-
-.toggle-btn {
-  margin-bottom: 20px;
-  padding: 8px;
-  background: var(--accent);
-  color: white;
-  border: none;
-  width: 100%;
-  cursor: pointer;
-}
-
-/* Content */
-.content {
-  margin-left: 260px;
-  padding: 80px 40px;
-  max-width: 1000px;
-}
-
-h1, h2 {
-  margin-top: 40px;
-}
-
-ul {
-  margin-left: 20px;
-}
-</style>
 </head>
 
 <body>
 
-<div class="sidebar">
-  <button class="toggle-btn" onclick="toggleMode()">Toggle Light/Dark Mode</button>
-  <a href="index.html">🏠 Home</a>
-  <a href="privacy.html">├─ 🛡 Privacy Policy</a>
-  <a href="terms.html">├─ 🧾 Terms of Service</a>
-  <a href="setup.html">└─ ⚙ Setup</a>
-</div>
+<header>
+    <div class="nav-container">
+        <h1 class="logo">Vigil</h1>
+        <nav>
+            <a href="index.html">🏠 Home</a>
+            <a href="setup.html">⚙ Setup</a>
+            <a href="privacy.html">🛡 Privacy</a>
+            <a href="terms.html">🧾 Terms</a>
+            <button id="themeToggle">Toggle Light/Dark</button>
+        </nav>
+    </div>
+</header>
 
-<div class="content">
+<main class="container legal-page">
 
-<h1>Vigil — Privacy Policy</h1>
-<p><strong>Last Updated:</strong> February 2026</p>
+    <h2>🛡 Vigil — Privacy Policy</h2>
+    <p class="last-updated">Last Updated: February 2026</p>
 
-<h2>1. Overview</h2>
-<p>This Privacy Policy explains how Vigil ("the Bot", "we", "us") collects, stores, uses, and protects data when used within Discord servers.</p>
-<p>By adding or using Vigil, you agree to this Privacy Policy and the Terms of Service.</p>
+    <section>
+        <h3>1. Overview</h3>
+        <p>
+            This Privacy Policy explains how Vigil ("the Bot", "we", "us")
+            collects, stores, uses, and protects data when used within Discord servers.
+        </p>
+        <p>
+            By adding or using Vigil, you agree to this Privacy Policy
+            and the Terms of Service.
+        </p>
+    </section>
 
-<h2>2. Data We Collect</h2>
-<ul>
-<li>Discord Server IDs</li>
-<li>Channel IDs and role IDs</li>
-<li>User IDs</li>
-<li>Audit log references for moderation tracking</li>
-<li>Security event logs (e.g., rapid deletions, mass joins)</li>
-<li>Configuration settings (whitelists, thresholds, permissions)</li>
-<li>Server backup structure data (roles, channels, emojis, stickers, server name)</li>
-</ul>
+    <section>
+        <h3>2. Data We Collect</h3>
+        <ul>
+            <li>Discord Server IDs</li>
+            <li>Channel IDs and Role IDs</li>
+            <li>User IDs</li>
+            <li>Audit log references for moderation tracking</li>
+            <li>Security event logs (e.g., rapid deletions, mass joins)</li>
+            <li>Configuration settings (whitelists, thresholds, permissions)</li>
+            <li>Server backup structure data (roles, channels, emojis, stickers, server name)</li>
+        </ul>
+        <p>
+            Vigil does <strong>not</strong> collect message content, direct messages,
+            email addresses, passwords, or payment information.
+        </p>
+    </section>
 
-<p>Vigil does <strong>not</strong> collect message content, direct messages, email addresses, passwords, or payment information.</p>
+    <section>
+        <h3>3. How Data Is Used</h3>
+        <ul>
+            <li>Detecting raids and destructive activity</li>
+            <li>Performing automated moderation actions</li>
+            <li>Maintaining server backups</li>
+            <li>Providing security scoring and activity logs</li>
+            <li>Managing permission hierarchy</li>
+        </ul>
+    </section>
 
-<h2>3. How Data Is Used</h2>
-<ul>
-<li>Detecting raids and destructive activity</li>
-<li>Performing automated moderation actions</li>
-<li>Maintaining server backups</li>
-<li>Providing security scoring and activity logs</li>
-<li>Managing permission hierarchy</li>
-</ul>
+    <section>
+        <h3>4. Automated Decision-Making</h3>
+        <p>
+            Vigil uses automated systems to detect suspicious behavior and
+            may automatically quarantine, ban, or restrict users.
+        </p>
+        <p>
+            False positives may occur. Server administrators are responsible
+            for reviewing and correcting automated actions.
+        </p>
+    </section>
 
-<h2>4. Automated Decision-Making</h2>
-<p>Vigil uses automated systems to detect suspicious behavior and may automatically quarantine, ban, or restrict users.</p>
-<p>False positives may occur. Server administrators are responsible for reviewing and correcting automated actions.</p>
+    <section>
+        <h3>5. Data Storage</h3>
+        <p>
+            Data is stored locally on the server hosting Vigil.
+            Data files are stored in JSON format and are not encrypted by default.
+        </p>
+        <p>
+            It is the responsibility of the bot operator to secure the hosting
+            environment and stored files.
+        </p>
+    </section>
 
-<h2>5. Data Storage</h2>
-<p>Data is stored locally on the server hosting Vigil. Data files are stored in JSON format and are not encrypted by default.</p>
-<p>It is the responsibility of the bot operator to secure the hosting environment and stored files.</p>
+    <section>
+        <h3>6. Data Retention</h3>
+        <p>
+            Server configuration and logs remain stored unless manually deleted
+            by the bot operator. Data is not automatically removed when a server
+            removes Vigil.
+        </p>
+    </section>
 
-<h2>6. Data Retention</h2>
-<p>Server configuration and logs remain stored unless manually deleted by the bot operator. Data is not automatically removed when a server removes Vigil.</p>
+    <section>
+        <h3>7. Data Sharing</h3>
+        <p>
+            Vigil does not sell, trade, or share collected data with third parties
+            except when legally required.
+        </p>
+    </section>
 
-<h2>7. Data Sharing</h2>
-<p>Vigil does not sell, trade, or share collected data with third parties except when legally required.</p>
+    <section>
+        <h3>8. International Data Protection</h3>
+        <p>
+            Users and bot operators are responsible for complying with applicable
+            data protection laws, including:
+        </p>
+        <ul>
+            <li>GDPR (European Union & UK)</li>
+            <li>CCPA (California, USA)</li>
+            <li>Other local data protection regulations</li>
+        </ul>
+    </section>
 
-<h2>8. International Data Protection</h2>
-<p>Users and bot operators are responsible for complying with applicable data protection laws, including:</p>
-<ul>
-<li>GDPR (European Union & UK)</li>
-<li>CCPA (California, USA)</li>
-<li>Other local data protection regulations</li>
-</ul>
+    <section>
+        <h3>9. Security Measures</h3>
+        <ul>
+            <li>Securing server access with strong authentication</li>
+            <li>Limiting system access to trusted operators</li>
+            <li>Keeping hosting software up to date</li>
+        </ul>
+    </section>
 
-<h2>9. Security Measures</h2>
-<p>We recommend:</p>
-<ul>
-<li>Securing server access with strong authentication</li>
-<li>Limiting system access to trusted operators</li>
-<li>Keeping hosting software up to date</li>
-</ul>
+    <section>
+        <h3>10. Your Rights</h3>
+        <p>
+            Depending on your jurisdiction, you may have rights to request
+            data access, correction, or deletion. Requests must be directed
+            to the bot operator.
+        </p>
+    </section>
 
-<h2>10. Your Rights</h2>
-<p>Depending on your jurisdiction, you may have rights to request data access, correction, or deletion. Requests must be directed to the bot operator.</p>
+    <section>
+        <h3>11. Changes to This Policy</h3>
+        <p>
+            We may update this Privacy Policy at any time.
+            Continued use of Vigil after updates constitutes
+            acceptance of the revised policy.
+        </p>
+    </section>
 
-<h2>11. Changes to This Policy</h2>
-<p>We may update this Privacy Policy at any time. Continued use of Vigil after updates constitutes acceptance of the revised policy.</p>
+    <section>
+        <h3>12. Contact</h3>
+        <p>
+            For privacy concerns or data-related questions,
+            contact the bot operator through the platform where Vigil is deployed.
+        </p>
+    </section>
 
-<h2>12. Contact</h2>
-<p>For privacy concerns or data-related questions, contact the bot operator through the platform where Vigil is deployed.</p>
+</main>
 
-</div>
+<footer>
+    <p>© 2026 Vigil Security. All rights reserved.</p>
+</footer>
 
 <script>
-function toggleMode() {
-  document.body.classList.toggle("light");
-}
+const toggleBtn = document.getElementById("themeToggle");
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+});
 </script>
 
 </body>
