@@ -57,24 +57,58 @@ body {
   background: var(--accent);
   color: white;
   border: none;
-  cursor: pointer;
   width: 100%;
+  cursor: pointer;
 }
 
 /* Content */
 .content {
   margin-left: 260px;
   padding: 80px 40px;
-  max-width: 900px;
+  max-width: 1100px;
 }
 
-button.invite {
-  padding: 12px 20px;
+.hero {
+  margin-bottom: 60px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 700px;
+}
+
+.invite-btn {
+  margin-top: 25px;
+  padding: 14px 24px;
   background: var(--accent);
   border: none;
   color: white;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 6px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-top: 0;
 }
 </style>
 </head>
@@ -90,13 +124,73 @@ button.invite {
 </div>
 
 <div class="content">
-  <h1>Vigil</h1>
-  <p>Advanced Discord Security Bot for anti-nuke, anti-raid, and automated moderation protection.</p>
 
-  <br>
+<div class="hero">
+  <h1>Vigil</h1>
+  <p>
+    Advanced Discord Security Bot built to defend your server against nukes,
+    raids, permission abuse, and structural destruction.
+  </p>
+
   <a href="https://discord.com/oauth2/authorize?client_id=1470779818848292997&permissions=8&integration_type=0&scope=bot+applications.commands">
-    <button class="invite">Invite Vigil</button>
+    <button class="invite-btn">Invite Vigil</button>
   </a>
+</div>
+
+<h2>Core Features</h2>
+
+<div class="features">
+
+  <div class="card">
+    <h3>🛡 Anti-Nuke Protection</h3>
+    <p>
+      Detects rapid channel deletions, role wipes, and destructive actions.
+      Automatically quarantines suspicious users.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🚨 Anti-Raid Detection</h3>
+    <p>
+      Monitors mass joins, spam bursts, and coordinated bot attacks.
+      Activates lockdown protocols instantly.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>💾 Server Backup & Restore</h3>
+    <p>
+      Backup roles, channels, emojis, stickers, and server configuration.
+      Restore structure after destructive incidents.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>⚙ Permission Hierarchy</h3>
+    <p>
+      Three-tier system: Owner, Trusted Admin, Regular Member.
+      Controlled command access to prevent abuse.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🔐 Verification Gate</h3>
+    <p>
+      4-digit verification code system to filter suspicious accounts
+      before granting server access.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>📊 Security Scoring</h3>
+    <p>
+      Real-time threat monitoring and server health scoring.
+      Stay aware of your server's security posture.
+    </p>
+  </div>
+
+</div>
+
 </div>
 
 <script>
