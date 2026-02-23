@@ -5,198 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vigil — Discord Security Bot</title>
 <link rel="stylesheet" href="style.css">
-<style>
-:root {
-  --bg: #0f172a;
-  --text: #e2e8f0;
-  --card: #1e293b;
-  --border: #334155;
-  --accent: #3b82f6;
-}
-
-.light {
-  --bg: #f8fafc;
-  --text: #0f172a;
-  --card: #e2e8f0;
-  --border: #cbd5e1;
-  --accent: #2563eb;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  display: flex;
-}
-
-/* Sidebar */
-.sidebar {
-  width: 260px;
-  background: var(--card);
-  height: 100vh;
-  padding: 20px;
-  position: fixed;
-  border-right: 1px solid var(--border);
-}
-
-.sidebar a {
-  display: block;
-  color: var(--text);
-  text-decoration: none;
-  margin: 8px 0;
-}
-
-.sidebar a:hover {
-  color: var(--accent);
-}
-
-.toggle-btn {
-  margin-bottom: 20px;
-  padding: 8px;
-  background: var(--accent);
-  color: white;
-  border: none;
-  width: 100%;
-  cursor: pointer;
-}
-
-/* Content */
-.content {
-  margin-left: 260px;
-  padding: 80px 40px;
-  max-width: 1100px;
-}
-
-.hero {
-  margin-bottom: 60px;
-}
-
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 18px;
-  opacity: 0.9;
-  max-width: 700px;
-}
-
-.invite-btn {
-  margin-top: 25px;
-  padding: 14px 24px;
-  background: var(--accent);
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: var(--card);
-  padding: 20px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-}
-
-.card h3 {
-  margin-top: 0;
-}
-</style>
 </head>
 
 <body>
 
-<div class="sidebar">
-  <button class="toggle-btn" onclick="toggleMode()">Toggle Light/Dark Mode</button>
-  <a href="index.html">🏠 Home</a>
-  <a href="privacy.html">├─ 🛡 Privacy Policy</a>
-  <a href="terms.html">├─ 🧾 Terms of Service</a>
-  <a href="setup.html">└─ ⚙ Setup</a>
-</div>
+<header>
+    <div class="nav-container">
+        <h1 class="logo">Vigil</h1>
+        <nav>
+            <a href="index.html">🏠 Home</a>
+            <a href="setup.html">⚙ Setup</a>
+            <a href="privacy.html">🛡 Privacy</a>
+            <a href="terms.html">🧾 Terms</a>
+            <button id="themeToggle">Toggle Light/Dark</button>
+        </nav>
+    </div>
+</header>
 
-<div class="content">
+<main class="container">
 
-<div class="hero">
-  <h1>Vigil</h1>
-  <p>
-    Advanced Discord Security Bot built to defend your server against nukes,
-    raids, permission abuse, and structural destruction.
-  </p>
+    <section class="hero">
+        <h2>Vigil — Advanced Discord Security</h2>
+        <p>
+            Enterprise-level protection for Discord servers.  
+            Automated anti-raid systems, intelligent moderation,
+            and full server backup protection — all in one bot.
+        </p>
+        <a href="setup.html" class="cta-button">Get Started</a>
+    </section>
 
-  <a href="https://discord.com/oauth2/authorize?client_id=1470779818848292997&permissions=8&integration_type=0&scope=bot+applications.commands">
-    <button class="invite-btn">Invite Vigil</button>
-  </a>
-</div>
+    <section class="features">
+        <div class="feature-card">
+            <h3>🛡 Raid Detection</h3>
+            <p>Detects mass joins, role abuse, rapid deletions, and malicious activity instantly.</p>
+        </div>
 
-<h2>Core Features</h2>
+        <div class="feature-card">
+            <h3>⚙ Automated Moderation</h3>
+            <p>Quarantine, ban, timeout, and kick systems with confirmation safety.</p>
+        </div>
 
-<div class="features">
+        <div class="feature-card">
+            <h3>💾 Full Server Backups</h3>
+            <p>Restore roles, channels, emojis, stickers, and server name with one command.</p>
+        </div>
 
-  <div class="card">
-    <h3>🛡 Anti-Nuke Protection</h3>
-    <p>
-      Detects rapid channel deletions, role wipes, and destructive actions.
-      Automatically quarantines suspicious users.
-    </p>
-  </div>
+        <div class="feature-card">
+            <h3>📊 Security Score</h3>
+            <p>Get a real-time security grade (A–F) based on server protection strength.</p>
+        </div>
+    </section>
 
-  <div class="card">
-    <h3>🚨 Anti-Raid Detection</h3>
-    <p>
-      Monitors mass joins, spam bursts, and coordinated bot attacks.
-      Activates lockdown protocols instantly.
-    </p>
-  </div>
+</main>
 
-  <div class="card">
-    <h3>💾 Server Backup & Restore</h3>
-    <p>
-      Backup roles, channels, emojis, stickers, and server configuration.
-      Restore structure after destructive incidents.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>⚙ Permission Hierarchy</h3>
-    <p>
-      Three-tier system: Owner, Trusted Admin, Regular Member.
-      Controlled command access to prevent abuse.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>🔐 Verification Gate</h3>
-    <p>
-      4-digit verification code system to filter suspicious accounts
-      before granting server access.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>📊 Security Scoring</h3>
-    <p>
-      Real-time threat monitoring and server health scoring.
-      Stay aware of your server's security posture.
-    </p>
-  </div>
-
-</div>
-
-</div>
+<footer>
+    <p>© 2026 Vigil Security. All rights reserved.</p>
+</footer>
 
 <script>
-function toggleMode() {
-  document.body.classList.toggle("light");
-}
+const toggleBtn = document.getElementById("themeToggle");
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+});
 </script>
 
 </body>
