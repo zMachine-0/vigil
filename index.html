@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vigil — Discord Security Bot</title>
   <link rel="stylesheet" href="style.css">
+  <script>if(localStorage.getItem('vigil-theme')==='light')document.documentElement.classList.add('light-mode');</script>
 </head>
 <body class="avatar-bg">
 
@@ -21,50 +22,46 @@
     </div>
   </header>
 
-  <main class="home-main">
+  <main class="wrapper">
+    <div class="content">
 
-    <section class="hero">
-      <p class="hero-eyebrow">Discord Security Bot</p>
-      <h2>Protect your server<br>with <span>Vigil</span></h2>
-      <p>
-        Enterprise-level protection for Discord servers. Automated anti-raid
-        systems, intelligent moderation, and full server backup — all in one bot.
-      </p>
-      <a href="setup.html" class="cta-button">Get Started →</a>
-    </section>
+      <div class="home-hero">
+        <p class="hero-eyebrow">Discord Security Bot</p>
+        <h1>Protect your server<br>with <span class="gradient-text">Vigil</span></h1>
+        <p class="hero-desc">
+          Enterprise-level protection for Discord servers. Automated anti-raid
+          systems, intelligent moderation, and full server backup — all in one bot.
+        </p>
+        <a href="setup.html" class="cta-button">Get Started →</a>
+      </div>
 
-    <section class="features">
-      <div class="feature-card">
-        <h3>🛡 Raid Detection</h3>
-        <p>Detects mass joins, role abuse, rapid deletions, and malicious activity the moment it starts.</p>
+      <h2>Features</h2>
+      <div class="features">
+        <div class="feature-card">
+          <h3>🛡 Raid Detection</h3>
+          <p>Detects mass joins, role abuse, rapid deletions, and malicious activity the moment it starts.</p>
+        </div>
+        <div class="feature-card">
+          <h3>⚙ Automated Moderation</h3>
+          <p>Quarantine, ban, timeout, and kick systems with confirmation prompts and full audit logs.</p>
+        </div>
+        <div class="feature-card">
+          <h3>💾 Full Server Backups</h3>
+          <p>Restore roles, channels, emojis, stickers, and server name with a single command.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📊 Security Score</h3>
+          <p>Real-time security grade (A–F) with a full breakdown of your server's protection status.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <h3>⚙ Automated Moderation</h3>
-        <p>Quarantine, ban, timeout, and kick systems with confirmation prompts and full audit logs.</p>
-      </div>
-      <div class="feature-card">
-        <h3>💾 Full Server Backups</h3>
-        <p>Restore roles, channels, emojis, stickers, and server name with a single command.</p>
-      </div>
-      <div class="feature-card">
-        <h3>📊 Security Score</h3>
-        <p>Get a real-time security grade (A–F) with a full breakdown of your server's protection status.</p>
-      </div>
-    </section>
 
+    </div>
   </main>
 
   <footer class="footer">
     <p>© 2026 Vigil Security. All rights reserved.</p>
   </footer>
 
-  <script>
-    const btn = document.getElementById("themeToggle");
-    btn.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
-      btn.textContent = document.body.classList.contains("light-mode") ? "🌙 Dark" : "☀️ Light";
-    });
-  </script>
-
+  <script src="theme.js"></script>
 </body>
 </html>
