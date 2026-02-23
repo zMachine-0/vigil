@@ -1,8 +1,4 @@
-// theme.js — shared across all pages
-// The <head> inline snippet already applied the class to <html> before paint.
-// This script wires up the toggle button after DOM is ready.
-
-document.addEventListener('DOMContentLoaded', function () {
+(function () {
   var btn = document.getElementById('themeToggle');
   if (!btn) return;
 
@@ -21,4 +17,4 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('vigil-theme', isLight() ? 'light' : 'dark');
     updateLabel();
   });
-});
+})();
