@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Privacy Policy - Vigil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      margin-top: 40px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #334155;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #1e293b;
+    }
+    blockquote {
+      background: #1e293b;
+      padding: 15px;
+      border-left: 4px solid #2563eb;
+      margin: 20px 0;
+    }
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    code {
+      background: #1e293b;
+      padding: 3px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Vigil — Privacy Policy</h1>
+
+<blockquote>
+<strong>Plain Language Summary:</strong> Vigil stores only what it needs to work — server IDs, user IDs for quarantine/whitelist records, and server backup files (roles, channels, emojis, stickers). It never sells your data or shares it with anyone. Verification codes are temporary and vanish within 5 minutes. You can delete your data at any time using bot commands. Use of Vigil also implies agreement to the <a href="terms.html">Terms of Service</a>.
+</blockquote>
+
+<hr>
+
+<h2>Version History</h2>
+
+<table>
+<tr><th>Version</th><th>Date</th><th>Changes</th></tr>
+<tr><td>1.0</td><td>February 2026</td><td>Initial release</td></tr>
+<tr><td>1.1</td><td>February 2026</td><td>Added legal obligations, security practices, GDPR/CCPA, FAQ, international compliance, and ToS cross-reference</td></tr>
+</table>
+
+<h2>Table of Contents</h2>
+<ol>
+<li>Overview</li>
+<li>Data We Collect</li>
+<li>How Data Is Used</li>
+<li>Data Retention & Deletion</li>
+<li>Data Security Practices</li>
+<li>Legal Obligations & Law Enforcement</li>
+<li>International Compliance (GDPR / CCPA)</li>
+<li>Your Rights</li>
+<li>Backup Restoration Process</li>
+<li>Children's Privacy</li>
+<li>Changes to This Policy</li>
+<li>Contact</li>
+</ol>
+
+<h2>1. Overview</h2>
+<p>
+Vigil ("the Bot", "we", "us") is a Discord security bot designed to protect servers from raids, nukes, and unauthorized actions. This Privacy Policy explains what data we collect, how it is used, and your rights regarding that data.
+</p>
+<p>
+By adding Vigil to your Discord server or using any of its features, you agree to this Privacy Policy and to the <a href="terms.html">Vigil Terms of Service</a>.
+</p>
+
+<h2>2. Data We Collect</h2>
+<p>
+Vigil collects and stores only the minimum data required to function. All data is stored locally on the server hosting the bot and is never sold, shared, or transmitted to third parties.
+</p>
+
+<h3>2.1 Server Data (per guild)</h3>
+
+<table>
+<tr><th>Data</th><th>Purpose</th><th>Stored</th></tr>
+<tr><td>Guild ID</td><td>Identifies your server across all data files</td><td>Yes</td></tr>
+<tr><td>Guild name</td><td>Included in backups for identification</td><td>Yes (in backup files only)</td></tr>
+<tr><td>Channel IDs</td><td>Log channel, verification channel configuration</td><td>Yes</td></tr>
+<tr><td>Role IDs</td><td>Owner role, Trusted Admin role, Whitelist role, Quarantine role</td><td>Yes</td></tr>
+</table>
+
+<h3>2.2 User Data (per guild)</h3>
+
+<table>
+<tr><th>Data</th><th>Purpose</th><th>Stored</th></tr>
+<tr><td>User ID</td><td>Permission management, quarantine records, whitelist</td><td>Yes</td></tr>
+<tr><td>User tag</td><td>Included in log messages</td><td>In log messages only</td></tr>
+<tr><td>Role IDs (quarantined users)</td><td>Restoring roles</td><td>Yes, until unquarantined</td></tr>
+<tr><td>Quarantine reason & timestamp</td><td>Audit trail</td><td>Yes, until unquarantined</td></tr>
+</table>
+
+<h3>2.3 Server Backups</h3>
+<p>
+Backups are stored as plain-text JSON files on the hosting server. They are not encrypted by default and never transmitted externally.
+</p>
+
+<h3>2.4 Verification Codes</h3>
+<p>
+Temporary 4-digit codes are stored in memory only for a maximum of 5 minutes and are never written to disk.
+</p>
+
+<h3>2.5 Data We Do NOT Collect</h3>
+<ul>
+<li>Message content</li>
+<li>Direct messages</li>
+<li>Passwords or authentication credentials</li>
+<li>IP addresses or device information</li>
+<li>Data from users outside servers Vigil is installed in</li>
+</ul>
+
+<h2>3. How Data Is Used</h2>
+<ul>
+<li>Operate security features</li>
+<li>Enforce permission hierarchy</li>
+<li>Create and restore backups</li>
+<li>Route logs and alerts</li>
+<li>Run verification system</li>
+</ul>
+
+<h2>4. Data Retention & Deletion</h2>
+
+<table>
+<tr><th>Data Type</th><th>Retention</th></tr>
+<tr><td>Owner / Admin / Whitelist records</td><td>Until removed</td></tr>
+<tr><td>Quarantine records</td><td>Until released</td></tr>
+<tr><td>Backups</td><td>Until manually deleted; auto-backups overwrite daily</td></tr>
+<tr><td>Verification codes</td><td>Maximum 5 minutes</td></tr>
+</table>
+
+<h2>5. Data Security Practices</h2>
+<ul>
+<li>Atomic file writes to prevent corruption</li>
+<li>Path traversal protection</li>
+<li>Automatic file recovery</li>
+</ul>
+<p>
+Bot operators are responsible for server security, access control, updates, and encryption if needed.
+</p>
+
+<h2>6. Legal Obligations</h2>
+<p>
+Data may be disclosed if legally required by valid court order, subpoena, or government request. Only minimum required data will be disclosed.
+</p>
+
+<h2>7. International Compliance</h2>
+<p>
+Users in the EU/UK (GDPR) and California (CCPA) have rights including access, deletion, and correction of data. Vigil does not sell personal data.
+</p>
+
+<h2>8. Your Rights</h2>
+<p>
+Server administrators can inspect, modify, or delete stored data. Individual members may request removal through administrators or contact the operator.
+</p>
+
+<h2>9. Backup Restoration Process</h2>
+<p>
+Restoring a backup resets server name, deletes current channels/roles, and recreates them from backup. Member lists and message history are not affected.
+</p>
+
+<h2>10. Children's Privacy</h2>
+<p>
+Vigil does not knowingly collect data from users under 13. Contact the operator for removal if necessary.
+</p>
+
+<h2>11. Changes to This Policy</h2>
+<p>
+Updates may occur at any time. Continued use after updates constitutes acceptance.
+</p>
+
+<h2>12. Contact</h2>
+<p>
+Contact the bot operator through the server or platform where Vigil is deployed for questions, deletion requests, or security concerns.
+</p>
+
+<br><br>
+<a href="index.html">← Back to Home</a>
+
+</body>
+</html>
