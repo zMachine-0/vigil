@@ -43,7 +43,7 @@ body {
 body.avatar-bg {
   background-image:
     linear-gradient(to bottom, rgba(11,13,20,0.80) 0%, rgba(11,13,20,0.97) 60%),
-    url('avatar.png');
+    url('/vigil/avatar.png');
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
@@ -51,7 +51,7 @@ body.avatar-bg {
 body.light-mode.avatar-bg {
   background-image:
     linear-gradient(to bottom, rgba(240,242,249,0.83) 0%, rgba(240,242,249,0.98) 60%),
-    url('avatar.png');
+    url('/vigil/avatar.png');
 }
 
 /* ── Navbar ─────────────────────────────────────────────── */
