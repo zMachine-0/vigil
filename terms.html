@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vigil — Terms of Service</title>
   <link rel="stylesheet" href="style.css">
+  <script>if(localStorage.getItem('vigil-theme')==='light')document.documentElement.classList.add('light-mode');</script>
 </head>
 <body>
 
@@ -25,16 +26,16 @@
     <div class="content">
 
       <h1>🧾 Terms of Service</h1>
-      <p class="last-updated">Last Updated: February 2026 · Also governed by the <a href="privacy.html" style="color:var(--accent)">Privacy Policy</a>.</p>
+      <p class="last-updated">Last Updated: February 2026 · Also governed by the <a href="privacy.html">Privacy Policy</a>.</p>
 
       <h2>1. Acceptance of Terms</h2>
-      <p>By inviting, installing, or using Vigil ("the Bot", "we", "us"), you agree to these Terms of Service and the <a href="privacy.html" style="color:var(--accent)">Privacy Policy</a>. Both documents apply. If you do not agree, do not add or use Vigil.</p>
+      <p>By inviting, installing, or using Vigil ("the Bot", "we", "us"), you agree to these Terms of Service and the <a href="privacy.html">Privacy Policy</a>. Both documents apply. If you do not agree, do not add or use Vigil.</p>
 
       <h2>2. Eligibility</h2>
       <p>You must be at least 13 years of age and comply with Discord's Terms of Service. By using Vigil, you confirm you meet these requirements. You are responsible for ensuring you have permission to add bots to any server where Vigil is installed.</p>
 
       <h2>3. Description of Service</h2>
-      <p>Vigil provides automated anti-nuke and anti-raid protection, quarantine and moderation tools, a three-tier permission system, server backup and restore functionality, a member verification gate, and security scoring. Vigil is provided as-is and may change at any time without notice.</p>
+      <p>Vigil provides automated anti-nuke and anti-raid protection, quarantine and moderation tools, a three-tier permission system, server backup and restore, a member verification gate, and security scoring. Vigil is provided as-is and may change at any time without notice.</p>
 
       <h2>4. Permitted Use</h2>
       <ul>
@@ -58,45 +59,44 @@
       <p>Violations may result in your server being blocked from Vigil without prior notice.</p>
 
       <h2>6. Automated Actions &amp; False Positives</h2>
-      <p>Vigil performs automated moderation actions based on security signals. By adding Vigil, you acknowledge that:</p>
+      <p>Vigil performs automated moderation based on security signals. By adding Vigil, you acknowledge that <strong>false positives can and do occur</strong>, including:</p>
       <ul>
-        <li>Automated actions may affect legitimate users — <strong>false positives can occur</strong></li>
-        <li>A trusted admin rapidly reorganizing channels may trigger anti-nuke and be quarantined</li>
-        <li>A large promotional influx of new accounts may be misidentified as a raid</li>
-        <li>Multiple bots added quickly may trigger a bot-burst lockdown</li>
-        <li>A user pasting large amounts of text may trigger message spam detection</li>
+        <li>A trusted admin rapidly reorganizing channels triggering anti-nuke and being quarantined</li>
+        <li>A large promotional influx of new members being misidentified as a raid</li>
+        <li>Multiple bots added quickly triggering a bot-burst lockdown</li>
+        <li>A user pasting large amounts of text triggering spam detection</li>
       </ul>
-      <p>It is the server administrator's responsibility to monitor Vigil's log channel, review automated actions, and reverse them when incorrect. Use <strong>/whitelist add</strong> for trusted users who may trigger thresholds.</p>
+      <p>Server administrators are responsible for monitoring Vigil's log channel and reversing incorrect automated actions promptly.</p>
 
       <h2>7. Backup &amp; Restore</h2>
-      <p>The restore process permanently deletes all current channels and roles before recreating them — <strong>this cannot be undone.</strong> Vigil does not back up message history or member lists. Discord CDN URLs for emojis and stickers may expire over time; very old backups may not fully restore all assets. It is your responsibility to verify backups before relying on them.</p>
+      <p>The restore process permanently deletes all current channels and roles before recreating them — <strong>this cannot be undone.</strong> Vigil does not back up message history or member lists. Old backups may not fully restore emojis or stickers if Discord CDN URLs have expired. Verify your backups before relying on them.</p>
 
       <h2>8. Permission Hierarchy &amp; Admin Responsibility</h2>
       <p>By granting users Owner-level or Trusted Admin permissions within Vigil, you accept full responsibility for all actions those users take. The bot operator is not responsible for misuse of permissions by users you authorize.</p>
 
       <h2>9. Hosting Responsibility</h2>
-      <p>Bot operators are responsible for securing the hosting environment, safeguarding plain-text data files, managing data retention for inactive servers, and complying with applicable data protection laws. See the <a href="privacy.html" style="color:var(--accent)">Privacy Policy</a> for full details.</p>
+      <p>Bot operators are responsible for securing the hosting environment, safeguarding plain-text data files, managing data retention for inactive servers, and complying with applicable data protection laws. See the <a href="privacy.html">Privacy Policy</a> for full details.</p>
 
       <h2>10. International Compliance</h2>
-      <p>Users and bot operators must comply with all applicable data privacy laws in their jurisdiction, including GDPR (EU &amp; UK) and CCPA (California, USA). It is the bot operator's responsibility to ensure their hosting and use of Vigil complies with local law.</p>
+      <p>Users and bot operators must comply with all applicable data privacy laws, including GDPR (EU &amp; UK) and CCPA (California, USA).</p>
 
       <h2>11. Disclaimer of Warranties</h2>
-      <p>Vigil is provided "as is" without any warranty of any kind. We do not warrant that Vigil will be error-free, uninterrupted, or always prevent security incidents. Automated actions may not always be accurate.</p>
+      <p>Vigil is provided "as is" without any warranty. We do not warrant that Vigil will be error-free, uninterrupted, or always prevent security incidents. Automated actions may not always be accurate.</p>
 
       <h2>12. Limitation of Liability</h2>
-      <p>To the maximum extent permitted by law, the bot operator shall not be liable for any indirect, incidental, or consequential damages, including loss of server data, disruption from automated actions, false positives affecting legitimate users, or unauthorized access to hosting data files. Your use of Vigil is entirely at your own risk.</p>
+      <p>To the maximum extent permitted by law, the bot operator shall not be liable for any indirect, incidental, or consequential damages — including loss of server data, disruption from automated actions, false positives, or unauthorized access to hosting files. Your use of Vigil is at your own risk.</p>
 
       <h2>13. Dispute Resolution</h2>
-      <p>We encourage resolving disputes informally first. Contact the bot operator directly — most issues can be resolved quickly. If direct contact does not resolve the issue within 14 days, both parties agree to attempt good-faith negotiation. If informal resolution fails, either party may pursue available legal remedies.</p>
+      <p>Contact the bot operator directly first — most issues resolve quickly. If not resolved within 14 days, both parties agree to good-faith negotiation. Unresolved disputes may be pursued through available legal remedies.</p>
 
       <h2>14. Governing Law &amp; Jurisdiction</h2>
-      <p>These Terms shall be governed by the laws of <strong>India</strong>. Any unresolved disputes shall be subject to the exclusive jurisdiction of the competent courts in India. Users outside India acknowledge their use may also be subject to local laws.</p>
+      <p>These Terms are governed by the laws of <strong>India</strong>. Unresolved disputes fall under the exclusive jurisdiction of the competent courts in India.</p>
 
       <h2>15. Modifications</h2>
       <p>We may update these Terms at any time. Continued use of Vigil after changes are published constitutes acceptance of the updated Terms.</p>
 
       <h2>16. Termination</h2>
-      <p>You may stop using Vigil at any time by removing it via Discord's Server Settings → Integrations. We reserve the right to block any server or user for violations of these Terms without prior notice.</p>
+      <p>You may stop using Vigil by removing it via Discord's Server Settings → Integrations. We reserve the right to block any server or user for violations of these Terms without prior notice.</p>
 
       <h2>17. Contact</h2>
       <p>For questions about these Terms, contact the bot operator through the platform where Vigil is deployed.</p>
@@ -108,13 +108,6 @@
     <p>© 2026 Vigil Security. All rights reserved.</p>
   </footer>
 
-  <script>
-    const btn = document.getElementById("themeToggle");
-    btn.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
-      btn.textContent = document.body.classList.contains("light-mode") ? "🌙 Dark" : "☀️ Light";
-    });
-  </script>
-
+  <script src="theme.js"></script>
 </body>
 </html>
