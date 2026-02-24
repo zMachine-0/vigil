@@ -150,18 +150,18 @@
       <p><span class="perm perm-tadmin">Trusted Admin</span></p>
 
       <h2>Backup Management</h2>
-      <p><em>Backups capture full server structure: roles, channels (with permission overwrites), emojis, animated emojis, stickers, and server name.</em></p>
+      <p><em>Backups capture full server structure: roles, channels (with permission overwrites), emojis, animated emojis, stickers, and server name. Each server has 5 permanent slots and 3 rolling auto backup slots.</em></p>
 
-      <h3>/backup create [name]</h3>
-      <p>Creates a new backup. If a backup with that name exists, confirms before overwriting. Names can only contain letters, numbers, hyphens, and underscores.</p>
+      <h3>/backup create [slot]</h3>
+      <p>Saves a backup to a permanent slot numbered 1–5. If the slot already has a backup, confirms before overwriting.</p>
       <p><span class="perm perm-owner">Owner Level</span></p>
 
       <h3>/backup list</h3>
-      <p>Lists all backups with creation date, role count, channel count, emoji count, sticker count, and server name. Auto-backups are marked 🔄.</p>
+      <p>Shows all backup slots. Auto backups (AB1/AB2/AB3) appear at the top — AB1 is the most recent, AB3 the oldest. Permanent slots (1–5) appear below.</p>
       <p><span class="perm perm-owner">Owner Level</span></p>
 
-      <h3>/backup load [name]</h3>
-      <p>Restores a backup. Deletes all current channels and roles, then recreates everything including re-uploading emojis and stickers. <strong>This cannot be undone.</strong> Requires confirmation.</p>
+      <h3>/backup load [slot]</h3>
+      <p>Restores from a slot. Pass a number (1–5) or an auto label (AB1, AB2, AB3). Deletes all current channels and roles then restores. <strong>This cannot be undone.</strong> Requires confirmation.</p>
       <p><span class="perm perm-owner">Owner Level</span></p>
 
       <h2>Verification</h2>
@@ -171,9 +171,12 @@
       <p><span class="perm perm-owner">Owner Level</span></p>
 
       <h2>Auto Backup</h2>
-      <p>Every midnight UTC, Vigil automatically creates a backup for every server, named:</p>
-      <pre>AUTO_BACKUP-1st-Jan-2025</pre>
-      <p>Auto-backups appear in <strong>/backup list</strong> marked with 🔄. Each day's copy overwrites the previous — only the most recent is kept per server.</p>
+      <p>Every midnight UTC, Vigil automatically saves a backup for every server. Keeps the last 3 days as a rolling history:</p>
+      <ul>
+        <li><strong>AB1</strong> — today's backup (most recent)</li>
+        <li><strong>AB2</strong> — yesterday's backup</li>
+        <li><strong>AB3</strong> — 2 days ago (oldest, deleted when next daily backup runs)</li>
+      </ul>
 
     </div>
   </main>
