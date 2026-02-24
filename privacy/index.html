@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/vigil/style.css">
   <script src="/vigil/theme.js" defer></script>
 </head>
-<body>
+<body class="avatar-bg">
 
   <header class="navbar">
     <div class="nav-container">
@@ -68,7 +68,8 @@
       <ul>
         <li><strong>Whitelist / Owner / TA records</strong> — until removed via bot commands</li>
         <li><strong>Quarantine records</strong> — until the user is released</li>
-        <li><strong>Backups</strong> — until manually deleted; daily auto-backups overwrite the previous copy</li>
+        <li><strong>Permanent backup slots (1–5)</strong> — until overwritten or manually deleted; each server has 5 fixed slots</li>
+        <li><strong>Auto backup slots (AB1–AB3)</strong> — rolling 3-day history; the oldest is deleted each day when a new one is created</li>
         <li><strong>Verification codes</strong> — 5 minutes maximum, in memory only</li>
       </ul>
       <p>Removing Vigil from your server does <strong>not</strong> automatically delete stored data files. The bot operator is responsible for purging data for inactive servers.</p>
