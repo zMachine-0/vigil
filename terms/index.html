@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/vigil/style.css">
   <script src="/vigil/theme.js" defer></script>
 </head>
-<body>
+<body class="avatar-bg">
 
   <header class="navbar">
     <div class="nav-container">
@@ -69,6 +69,7 @@
       <p>Server administrators are responsible for monitoring Vigil's log channel and reversing incorrect automated actions promptly.</p>
 
       <h2>7. Backup &amp; Restore</h2>
+      <p>Vigil provides two types of backup storage per server: <strong>5 permanent slots</strong> (numbered 1–5) which you control and overwrite manually, and <strong>3 auto backup slots</strong> (AB1–AB3) which rotate daily — AB1 is always the most recent, AB3 the oldest (up to 3 days ago). When a new auto backup runs, the oldest is permanently deleted.</p>
       <p>The restore process permanently deletes all current channels and roles before recreating them — <strong>this cannot be undone.</strong> Vigil does not back up message history or member lists. Old backups may not fully restore emojis or stickers if Discord CDN URLs have expired. Verify your backups before relying on them.</p>
 
       <h2>8. Permission Hierarchy &amp; Admin Responsibility</h2>
