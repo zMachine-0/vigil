@@ -63,7 +63,7 @@
       <p>Stored data is accessible to:</p>
       <ul>
         <li><strong>Server administrators</strong> — via bot commands or direct access to the <code>data/</code> and <code>backups/</code> directories on the hosting server</li>
-        <li><strong>The bot developer(s)</strong> — solely for maintenance, debugging, security, or data migration purposes. This includes inspecting corrupted backups, diagnosing restore failures, and performing global backup operations</li>
+        <li><strong>The bot developer (@MachineBuild)</strong> — solely for maintenance, debugging, security, or data migration purposes. This includes inspecting corrupted backups, diagnosing restore failures, performing global backup operations, and using the <code>/devpanel</code> command to view guild membership and generate server invites</li>
       </ul>
       <p>No other parties have access to stored data.</p>
 
@@ -85,8 +85,12 @@
       </ul>
       <p>Removing Vigil from your server does <strong>not</strong> automatically delete stored data files. The bot operator is responsible for purging data for inactive servers. Data may also be deleted by the developer during maintenance, migration, or following prolonged inactivity.</p>
 
-      <h2>9. Backup Operations by the Developer</h2>
-      <p>The developer may trigger backup operations across all guilds for maintenance, security, or migration purposes. These operations follow the same round-robin slot system (AB1/AB2/AB3) as scheduled daily backups and are logged to each guild's configured log channel. No additional data is collected during these operations.</p>
+      <h2>9. Developer Administrative Tools</h2>
+      <p>The developer (@MachineBuild) has access to the following privileged tools:</p>
+      <ul>
+        <li><strong>/globalbackup</strong> — triggers a forced backup for every guild using the same round-robin slot system (AB1/AB2/AB3) as scheduled daily backups. Subject to a 10-minute cooldown. Logged to each guild's log channel. No additional data is collected.</li>
+        <li><strong>/devpanel</strong> — displays all guilds the bot is currently in, including their names and member counts. From this panel the developer may generate a one-use, 5-minute invite link sent to their DMs (meaning <strong>@MachineBuild may join your server</strong> if operationally or legally necessary), or remove Vigil from a guild after two confirmation steps — including removing Vigil from servers that are violating Discord's Terms of Service, Vigil's Terms of Service, or using the bot to harm members. Guild names, IDs, and member counts are read from Discord's cache and are not stored separately.</li>
+      </ul>
 
       <h2>10. Data Sharing</h2>
       <p>Vigil does not sell, trade, or share data with any third party. Data may be disclosed if legally compelled by a valid court order or law enforcement request — only to the minimum extent required, and only where legally permitted.</p>
@@ -103,13 +107,13 @@
       <p>The bot operator is responsible for: securing server access with strong authentication, limiting file access to trusted operators, keeping hosting software up to date, and encrypting data at rest if the environment is shared or untrusted.</p>
 
       <h2>13. Your Rights</h2>
-      <p>As a server administrator, you can view, edit, or delete stored data using bot commands or by accessing the data files directly on the hosting server. As an individual member, you may request a server administrator remove your records, or contact the bot operator directly.</p>
+      <p>As a server administrator, you can view, edit, or delete stored data using bot commands or by accessing the data files directly on the hosting server. As an individual member, you may request a server administrator remove your records, or contact <strong>@MachineBuild</strong> through Vigil's Discord server directly.</p>
 
       <h2>14. Changes to This Policy</h2>
       <p>We may update this Privacy Policy at any time. Continued use of Vigil after updates constitutes acceptance of the revised policy.</p>
 
       <h2>15. Contact</h2>
-      <p>For privacy concerns, data requests, or to report a data issue, contact the bot operator through Vigil's support server. Include your Discord user ID and server name so records can be located promptly.</p>
+      <p>For privacy concerns, data requests, or to report a data issue, contact <strong>@MachineBuild</strong> through Vigil's Discord server. Include your Discord user ID and server name so records can be located promptly.</p>
 
     </div>
   </main>
