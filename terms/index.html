@@ -79,7 +79,13 @@
       <p>While backups are provided as a convenience feature, <strong>data integrity and successful restoration are not guaranteed.</strong> Backup files may become corrupted, incomplete, or unrestorable due to unexpected errors, Discord API changes, or hosting issues. Users are responsible for maintaining their own copies of important server configurations and for verifying backups regularly.</p>
 
       <h2>10. Administrative Control</h2>
-      <p>The developer reserves the right to perform maintenance actions affecting stored data when necessary for security, migration, system integrity, or operational purposes. This includes triggering backup operations across all guilds, migrating data formats, and removing data for inactive servers. Such actions will be logged to each affected guild's log channel where possible.</p>
+      <p>@MachineBuild (the developer) reserves the right to perform maintenance actions affecting stored data and to intervene in any guild where Vigil is present when necessary for security, migration, system integrity, rule enforcement, or operational purposes. Privileged developer tools include:</p>
+      <ul>
+        <li><strong>/globalbackup</strong> — forces a backup across all guilds following the standard AB1/AB2/AB3 rotation. Logged to each guild's log channel. Subject to a 10-minute rate limit per developer.</li>
+        <li><strong>/devpanel</strong> — allows the developer to view all guilds the bot is in (names and member counts), generate a one-use 5-minute server invite sent via DM, or remove Vigil from a guild following two confirmation steps.</li>
+      </ul>
+      <p><strong>Developer right to join your server:</strong> By adding Vigil, you acknowledge that the developer (@MachineBuild) may generate a server invite and join any guild where Vigil is present for the purposes of investigation, maintenance, or enforcement. This will only occur when reasonably necessary.</p>
+      <p><strong>Developer right to remove Vigil:</strong> The developer reserves the right to make Vigil leave any server at any time, without prior notice, if that server is found to be in violation of Discord's Terms of Service or Community Guidelines, violating Vigil's Terms of Service, using Vigil to harm, abuse, or harass members, or engaging in any activity deemed harmful or illegal. These tools exist for legitimate operational purposes including data migration, schema changes, emergency response, and infrastructure maintenance. Such actions will be logged to each affected guild's log channel where possible.</p>
 
       <h2>11. Permission Hierarchy &amp; Admin Responsibility</h2>
       <p>By granting users Owner-level or Trusted Admin permissions within Vigil, you accept full responsibility for all actions those users take. The developer is not responsible for misuse of permissions by users you authorize.</p>
@@ -109,7 +115,7 @@
       <p>You may stop using Vigil by removing it via Discord's Server Settings → Integrations. We reserve the right to block any server or user for violations of these Terms without prior notice.</p>
 
       <h2>20. Contact</h2>
-      <p>For questions about these Terms, contact the bot developer through Vigil's support server.</p>
+      <p>For questions about these Terms, contact <strong>@MachineBuild</strong> through Vigil's Discord server.</p>
 
     </div>
   </main>
